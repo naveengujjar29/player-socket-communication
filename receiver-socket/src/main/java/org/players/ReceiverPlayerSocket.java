@@ -20,7 +20,7 @@ public class ReceiverPlayerSocket {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         ServerSocket serverSocket = getServerSocket();
-        System.out.println("Receiver waiting for messages...");
+        System.out.println("Receiver waiting to connect...");
         Socket clientSocket = serverSocket.accept();
         Thread receiverThread = new Thread(new ReceiverDataThread(clientSocket));
         receiverThread.start();
